@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="SYSTEM" directorySegmentName="seg_0" id="3A9E90F1-8326-B0B4-E692-A2FE06012D42">
+<sourceConnName>system</sourceConnName>
+<sourceObjName>SYSTEM</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:53 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<schemaObject>8BDCEB76-D3B3-3D96-DBED-D11042FD22D8</schemaObject>
+<privileges>GLOBAL QUERY REWRITE, CREATE MATERIALIZED VIEW, SELECT ANY TABLE, CREATE TABLE, UNLIMITED TABLESPACE</privileges>
+<privilegesWithAdminOption>DEQUEUE ANY QUEUE, ENQUEUE ANY QUEUE, MANAGE ANY QUEUE</privilegesWithAdminOption>
+<profile>DEFAULT</profile>
+</UserOraclev10g>

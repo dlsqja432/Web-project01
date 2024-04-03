@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="MEMBER" directorySegmentName="seg_0" id="2EB56E68-9948-0770-880F-8D1ABB9EDE2A">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<schemaObject>8BDCEB76-D3B3-3D96-DBED-D11042FD22D8</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>01E91DB9-D2CF-2FEB-61DA-36E6D9BC7250</segment>
+<tableSpace>3FA1CCE4-0052-30ED-F5C0-C45259CF8299</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="EMAIL" id="15E60753-5FCC-2F0F-683F-E557FBA2FE03">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:41:03 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REG_DATA" id="19CAA30E-7F6E-1FAA-CE29-64ECF461D0FB">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<defaultValue>sysdate</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="PW" id="3623A274-C59E-3CC4-B07B-5FCF18365FF0">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:41:03 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PASSWORD" id="4D3D8541-600A-16E5-FAF4-143113A2C31A">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TEL" id="A84F2461-E842-0C70-6EA6-A2B0E49F56FB">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="ADA69F7F-BF5C-00A1-9D3F-DAA4C339A221">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ADDRESS" id="BE09194B-3032-5389-49DC-A37C58E90D3A">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="FC5A4F57-04E8-CCE3-9D40-BE7610BAA496">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="MEMBER_PK" id="74841451-FF98-8BC7-82C0-D776AD633B79">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:41:03 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<schemaObject>8BDCEB76-D3B3-3D96-DBED-D11042FD22D8</schemaObject>
+<segment>6F442A88-0382-1AF3-9D7A-7D7714F1CD52</segment>
+<tableSpace>3FA1CCE4-0052-30ED-F5C0-C45259CF8299</tableSpace>
+<indexSegment>6F442A88-0382-1AF3-9D7A-7D7714F1CD52</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

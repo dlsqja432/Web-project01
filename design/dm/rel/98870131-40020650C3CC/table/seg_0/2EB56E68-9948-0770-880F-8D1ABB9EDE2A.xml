@@ -1,0 +1,149 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2EB56E68-9948-0770-880F-8D1ABB9EDE2A" schemaObject="8BDCEB76-D3B3-3D96-DBED-D11042FD22D8" name="MEMBER">
+<sourceConnName>system</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>MEMBER</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="FC5A4F57-04E8-CCE3-9D40-BE7610BAA496">
+<sourceConnName>system</sourceConnName>
+<sourceObjSchema>MEMBER</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PW" id="3623A274-C59E-3CC4-B07B-5FCF18365FF0">
+<sourceConnName>system</sourceConnName>
+<sourceObjSchema>MEMBER</sourceObjSchema>
+<sourceObjName>PW</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:41:03 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<importedID>5ABD373C-FBE8-9909-D815-884D88A0ECBC</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 BYTE</dataTypeSize>
+<ownDataTypeParameters>300 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="ADA69F7F-BF5C-00A1-9D3F-DAA4C339A221">
+<sourceConnName>system</sourceConnName>
+<sourceObjSchema>MEMBER</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="15E60753-5FCC-2F0F-683F-E557FBA2FE03">
+<sourceConnName>system</sourceConnName>
+<sourceObjSchema>MEMBER</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:41:03 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<importedID>8A473A8D-4A26-6F63-91BF-84C250BF8B21</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEL" id="A84F2461-E842-0C70-6EA6-A2B0E49F56FB">
+<sourceConnName>system</sourceConnName>
+<sourceObjSchema>MEMBER</sourceObjSchema>
+<sourceObjName>TEL</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASSWORD" id="4D3D8541-600A-16E5-FAF4-143113A2C31A">
+<sourceConnName>system</sourceConnName>
+<sourceObjSchema>MEMBER</sourceObjSchema>
+<sourceObjName>PASSWORD</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12 BYTE</dataTypeSize>
+<ownDataTypeParameters>12 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESS" id="BE09194B-3032-5389-49DC-A37C58E90D3A">
+<sourceConnName>system</sourceConnName>
+<sourceObjSchema>MEMBER</sourceObjSchema>
+<sourceObjName>ADDRESS</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REG_DATA" id="19CAA30E-7F6E-1FAA-CE29-64ECF461D0FB">
+<sourceConnName>system</sourceConnName>
+<sourceObjSchema>MEMBER</sourceObjSchema>
+<sourceObjName>REG_DATA</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:54 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="74841451-FF98-8BC7-82C0-D776AD633B79" schemaObject="8BDCEB76-D3B3-3D96-DBED-D11042FD22D8" name="MEMBER_PK">
+<sourceConnName>system</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008388</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:41:03 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<importedID>19282330-D545-90B5-B599-A31025F7A7A8</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC5A4F57-04E8-CCE3-9D40-BE7610BAA496"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

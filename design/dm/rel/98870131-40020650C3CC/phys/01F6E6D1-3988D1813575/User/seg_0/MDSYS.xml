@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="MDSYS" directorySegmentName="seg_0" id="MDSYS">
+<sourceConnName>system</sourceConnName>
+<sourceObjName>MDSYS</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 01:37:18 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<schemaObject>56EA4F6E-97A3-8F9C-8AF0-D71DED33B2E6</schemaObject>
+<nullInstance>true</nullInstance>
+<storableNullInstance>true</storableNullInstance>
+<privileges>INHERIT ANY PRIVILEGES, ADMINISTER DATABASE TRIGGER, CREATE TRIGGER, CREATE ANY SEQUENCE, CREATE SEQUENCE, CREATE VIEW, DROP PUBLIC SYNONYM, CREATE PUBLIC SYNONYM, CREATE TABLE</privileges>
+<profile>DEFAULT</profile>
+<quotaItems>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem1" id="F618E986-8A3C-EAAE-4053-AF6A32E69246">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem2" id="107AC11D-5064-871D-4532-6AB75AED75D0">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem1" id="EF8F36F8-C94C-3266-2296-F018913C199D">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:41:03 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem2" id="55597E4E-B03F-16A3-239F-DFEFD42944B0">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:41:03 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</QuotaItem>
+</quotaItems>
+</UserOraclev10g>

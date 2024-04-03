@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="QNA" directorySegmentName="seg_0" id="E2A98110-BD13-2D02-DBCC-DA2213A10899">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<schemaObject>8BDCEB76-D3B3-3D96-DBED-D11042FD22D8</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>01E91DB9-D2CF-2FEB-61DA-36E6D9BC7250</segment>
+<tableSpace>3FA1CCE4-0052-30ED-F5C0-C45259CF8299</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NO" id="03A332A5-36D9-5307-038A-89363ABDE52D">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AID" id="0BAB2BCC-199A-C7A6-6B1E-2B3C88A75699">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RESDATE" id="5F7292C0-B98E-5D09-DA42-8D69979260DD">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<defaultValue>sysdate</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="PARNO" id="8D022396-051F-57E8-D1B6-E615B4A8DC21">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TITLE" id="8EF3E9D7-91A6-3AE2-45F6-58C55C81E39C">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VISITED" id="B1595671-4D01-E025-8E74-26BD7102501D">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CONTENT" id="E6098B93-8673-28FB-4600-70DCC41D18D5">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PLEVEL" id="E84BFF76-6B7B-D3FE-5403-C211269BEDC1">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008394" id="C77FBA88-1AD1-8D16-B03A-7BF6ECEF64EE">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:41:03 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="QNA_PK" id="4D9F0AFC-EAFD-28D1-0E29-0F81EB46231E">
+<createdBy>user1</createdBy>
+<createdTime>2024-04-02 02:12:58 UTC</createdTime>
+<ownerDesignName>dm</ownerDesignName>
+<schemaObject>8BDCEB76-D3B3-3D96-DBED-D11042FD22D8</schemaObject>
+<segment>6F442A88-0382-1AF3-9D7A-7D7714F1CD52</segment>
+<tableSpace>3FA1CCE4-0052-30ED-F5C0-C45259CF8299</tableSpace>
+<indexSegment>6F442A88-0382-1AF3-9D7A-7D7714F1CD52</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>
