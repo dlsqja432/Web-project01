@@ -1,0 +1,31 @@
+package org.bupyeong.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.bupyeong.dto.Notice;
+
+import com.mysql.cj.protocol.Resultset;
+
+public class NoticeDAO {
+	Connection con = null;
+	PreparedStatement pstmt = null;
+	Resultset rs = null;
+
+	public List<Notice> getNoticeList() {
+		List<Notice> notiList = new ArrayList<>();
+		
+		OracleDB oracle = new OracleDB();
+		try {
+			con = oracle.Connect();
+			pstmt = con.prepareStatement(oracle.SELECT_ALL_NOTICE);
+			rs = pstmt.executeQuery();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return notiList;
+	}
+}

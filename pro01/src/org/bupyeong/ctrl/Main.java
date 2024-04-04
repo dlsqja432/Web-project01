@@ -19,11 +19,12 @@ public class Main extends HttpServlet {
     }
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String author = "학생 장인범";
+		String author = "학생인 장인범";
 		
 		ServletContext application = request.getServletContext();
 		String realPath = request.getSession().getServletContext().getRealPath("/");
 		application.setAttribute("realPath", realPath);
+		application.setAttribute("title", "부평 소개");
 		
 //		List<Notice> latestNotiList = new ArrayList<>();
 //		List<Qna> latestQnaList = new ArrayList<>();
