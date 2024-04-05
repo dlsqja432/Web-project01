@@ -8,4 +8,5 @@ public interface SqlLang {
 	String INSERT_NOTICE = "insert into notice values (nseq.nextval, ?, ?, sysdate, 0)";
 	String UPDATE_NOTICE = "update notice set title=?, content=? where no=?";	
 	String DELETE_NOTICE = "delete from notice where no=?";	
+	String VISITED_UPDATE_NOTICE = "update notice set visited=visited+1 where no=?";
 }

@@ -14,9 +14,6 @@
 .page { clear:both; height:100vh; }
 .page_title { font-size:36px; padding-top:2em; text-align:center; }
 #page1 { background-color:#ececec }
-th.item1 { width:5% }
-th.item2 { width:60% }
-th.item3 { width:20% }
 </style>
 </head>
 <body>
@@ -29,24 +26,26 @@ th.item3 { width:20% }
 			<h3 class="page_title">공지사항 상세보기</h3>
 			<div>
 				<table class="table">
-					 <thead class="thead-dark">
-					 	<tr>
-					 		<th class="item1">번호</th>
-					 		<th class="item2">제목</th>
-					 		<th class="item3">작성일</th>
-					 		<th class="item4">조회수</th>
-					 	</tr>
-					 </thead>
 					 <tbody>
 					 	<tr>
+					 		<th>글 번호</th>
 					 		<td>${noti.no }</td>
-					 		<td>${noti.title }</td>
-					 		<td>${noti.resdate }</td>
-					 		<td>${noti.visited }</td>
 					 	</tr>
 					 	<tr>
-					 		<th><label for="content">내용</label></th>
-					 		<td colspan="3">${noti.content }</td>
+					 		<th>글 제목</th>
+					 		<td>${noti.title }</td>
+					 	</tr>
+					 	<tr>
+					 		<th>글 내용</th>
+					 		<td>${noti.content }</td>
+					 	</tr>
+					 	<tr>
+					 		<th>작성일시</th>
+					 		<td>${noti.resdate }</td>
+					 	</tr>
+					 	<tr>
+					 		<th>조회수</th>
+					 		<td>${noti.visited }</td>
 					 	</tr>
 					 </tbody>
 				</table>
@@ -55,6 +54,8 @@ th.item3 { width:20% }
  					<a href="${path0 }/notice/noti_ins.jsp" class="btn btn-secondary">글 등록</a>
  					<a href="${path0 }/EditNotice.do?no=${noti.no }" class="btn btn-secondary">글 수정</a>
  					<a href="${path0 }/DelNotice.do?no=${noti.no }" class="btn btn-secondary">글 삭제</a>
+ 					<a href="${path0 }/NotiList.do" class="btn btn-secondary">글 목록</a>
+ 					
 				</div>
 			</div>
 		</div>

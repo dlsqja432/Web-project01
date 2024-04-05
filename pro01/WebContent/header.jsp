@@ -11,7 +11,7 @@
 		<ul>
 			<c:if test="${empty sid }">
 			<li><a href="${hpath }/member/">로그인</a></li>
-			<li><a href="${hpath }/member/">회원가입</a></li>
+			<li><a href="${hpath }/sub/join_member.jsp">회원가입</a></li>
 			</c:if>
 			<c:if test="${!empty sid }">
 			<li><a href="${hpath }/member/">로그아웃</a></li>

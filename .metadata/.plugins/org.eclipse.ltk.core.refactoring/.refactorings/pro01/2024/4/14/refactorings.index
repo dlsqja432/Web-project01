@@ -5,3 +5,7 @@
 1712206364311	Rename type 'notiInsCtrl'
 1712209046817	Delete element
 1712209123044	Delete element
+1712287392669	Copy compilation unit
+1712305835559	Move file
+1712305855640	Move compilation units
+1712305871191	Move 'noticeList.jsp' to 'notice'

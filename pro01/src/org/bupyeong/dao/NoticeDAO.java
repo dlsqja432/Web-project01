@@ -44,6 +44,36 @@ public class NoticeDAO {
 		OracleDB oracle = new OracleDB();
 		try {
 			con = oracle.connect();
+			pstmt = con.prepareStatement(SqlLang.VISITED_UPDATE_NOTICE);
+			pstmt.setInt(1, no);
+			int cnt = pstmt.executeUpdate();
+			pstmt = null;
+			
+			pstmt = con.prepareStatement(SqlLang.SELECT_NOTICE_BYNO);
+			pstmt.setInt(1, no);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				noti.setNo(rs.getInt("no"));
+				noti.setTitle(rs.getString("title"));
+				noti.setContent(rs.getString("content"));
+				noti.setResdate(rs.getString("resdate"));
+				noti.setVisited(rs.getInt("visited"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			oracle.close(con, pstmt, rs);
+		}
+		
+		return noti;
+	}
+	
+	public Notice getNotice2(int no) {
+		Notice noti = new Notice();
+		OracleDB oracle = new OracleDB();
+		try {
+			con = oracle.connect();
 			pstmt = con.prepareStatement(SqlLang.SELECT_NOTICE_BYNO);
 			pstmt.setInt(1, no);
 			rs = pstmt.executeQuery();

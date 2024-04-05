@@ -43,7 +43,7 @@
 					 </tbody>
 				</table>
 				<p>작성 일시 : ${noti.resdate }</p>
-				<p>읽은 횟수 : ${noti.visited }</p>
+				<p>조회수 : ${noti.visited }</p>
 				<hr>
 				<div class="btn-group">
  					<button type="submit" class="btn btn-secondary">글 수정완료</button>
