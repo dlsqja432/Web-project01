@@ -123,6 +123,8 @@ public class NoticeDAO {
 			cnt = pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			oracle.close(con, pstmt);
 		}
 		return cnt;
 	}
@@ -137,6 +139,8 @@ public class NoticeDAO {
 			cnt = pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			oracle.close(con, pstmt);
 		}
 		return cnt;
 	}
