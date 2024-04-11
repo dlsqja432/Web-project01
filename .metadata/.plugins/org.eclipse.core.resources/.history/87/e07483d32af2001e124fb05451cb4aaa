@@ -1,8 +1,0 @@
-package org.bupyeong.test;
-// DB에 이상이 있나 없나 테스트 하기 위함
-public class OracleTest {
-
-	public static void main(String[] args) {
-		
-	}
-}

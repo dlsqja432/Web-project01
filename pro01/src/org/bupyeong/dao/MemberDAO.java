@@ -19,7 +19,7 @@ public class MemberDAO {
 		OracleDB oracle = new OracleDB();
 		try {
 			con = oracle.connect();
-			pstmt = con.prepareStatement(SqlLang.SELECT_ALL_NOTICE);
+			pstmt = con.prepareStatement(SqlLang.SELECT_ALL_MEMBER);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
@@ -116,6 +116,29 @@ public class MemberDAO {
 			oracle.close(con, pstmt);
 		}
 		return cnt;
+	}
+
+	public boolean idCheck(String id) {
+		boolean ck = false;
+		Member mem = new Member();
+		OracleDB oracle = new OracleDB();
+		try {
+			con = oracle.connect();
+			pstmt = con.prepareStatement(SqlLang.SELECT_ONE_MEMBER);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				ck = true;
+			} else {
+				ck = false;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			oracle.close(con, pstmt, rs);
+		}
+		return ck;
 	}
 }
 

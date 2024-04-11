@@ -51,11 +51,12 @@
 				</table>
 				<hr>
 				<div class="btn-group">
+				<c:if test="${sid.equals('admin') }">
  					<a href="${path0 }/notice/noti_ins.jsp" class="btn btn-secondary">글 등록</a>
  					<a href="${path0 }/EditNotice.do?no=${noti.no }" class="btn btn-secondary">글 수정</a>
  					<a href="${path0 }/DelNotice.do?no=${noti.no }" class="btn btn-secondary">글 삭제</a>
  					<a href="${path0 }/NotiList.do" class="btn btn-secondary">글 목록</a>
- 					
+ 				</c:if>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<hr>
+<footer>
+	<div class="ft_wrap" style="width:1400px; margin:0 auto;">
+		<nav id="fnb">
+			<ul>
+				<li><a href="${hpath }/member/terms.jsp">회원약관</a></li>
+			</ul>
+		</nav>
+	</div>
+	<h2>푸터 영역</h2>
+</footer>

@@ -9,14 +9,13 @@
 <meta charset="UTF-8">
 <title>${title }</title>
 <%@ include file="/head.jsp" %>
+<script src="${path0 }/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="${path0 }/css/jquery.dataTables.css">
 <style>
 .container {width:1400px; }
 .page { clear:both; height:100vh; }
 .page_title { font-size:36px; padding-top:2em; text-align:center; }
 #page1 { background-color:#ececec }
-#page2 { background-color:#fbffc4 }
-#page3 { background-color:#f9d6ff }
-#page4 { background-color:#d6f5ff }
 th.item1 { width:5% }
 th.item2 { width:60% }
 th.item3 { width:20% }
@@ -31,7 +30,7 @@ th.item3 { width:20% }
 		<div style="width:1400px; margin:0 auto">
 			<h3 class="page_title">공지사항 목록</h3>
 			<div>
-				<table class="table">
+				<table class="table" id="tb1">
 					 <thead class="thead-dark">
 					 	<tr>
 					 		<th class="item1">번호</th>
@@ -45,8 +44,15 @@ th.item3 { width:20% }
 						 	<c:forEach var="dto" items="${notiList }">
 						 	<tr>
 						 		<td>${dto.no }</td>
-						 		<td><a href="${path0 }/GetNotice.do?no=${dto.no }">${dto.title }</a>
-						 		</td><td>${dto.resdate }</td>
+						 		<td>
+						 			<c:if test="${empty sid }">
+						 			<strong>${dto.title }</strong>
+						 			</c:if>
+						 			<c:if test="${not empty sid }">
+						 			<a href="${path0 }/GetNotice.do?no=${dto.no }">${dto.title }</a>
+						 			</c:if>
+						 		</td>
+						 		<td>${dto.resdate }</td>
 						 		<td>${dto.visited }</td>
 						 	</tr>
 						 	</c:forEach>
@@ -58,38 +64,20 @@ th.item3 { width:20% }
 						 </c:if>
 					 </tbody>
 				</table>
+				<script>
+				$(document).ready(function(){
+					$("#tb1").DataTable({
+						order:[[0,"desc"]]
+					});
+				});
+				</script>
 				<hr>
+				<c:if test="${sid.equals('admin') }">
 				<div class="btn-group">
  					<a href="${path0 }/notice/noti_ins.jsp" class="btn btn-secondary">글 작성하기</a>
 				</div>
+				</c:if>
 			</div>
-		</div>
-	</section>
-	<section class="page" id="page2">
-		<div style="width:1400px; margin:0 auto;">
-			<h3 class="page_title">임시 서버 애플리케이션 디텍토리 : ${realPath }</h3>
-			<h3>main프로젝트 디렉토리 : ${path0 }</h3>
-			<h3>head 프로젝트 디렉토리 : ${ipath }</h3>
-			<h3>header 프로젝트 디렉토리 : ${hpath }</h3>
-			<hr>
-		</div>
-	</section>
-	<section class="page" id="page3">
-		<div style="width:1400px; margin:0 auto;">
-			<h3 class="page_title">임시 제목</h3>
-			<h3>main프로젝트 디렉토리 : ${path0 }</h3>
-			<h3>head 프로젝트 디렉토리 : ${ipath }</h3>
-			<h3>header 프로젝트 디렉토리 : ${hpath }</h3>
-			<hr>
-		</div>
-	</section>
-	<section class="page" id="page4">
-		<div style="width:1400px; margin:0 auto;">
-			<h3 class="page_title">임시 제목</h3>
-			<h3>main프로젝트 디렉토리 : ${path0 }</h3>
-			<h3>head 프로젝트 디렉토리 : ${ipath }</h3>
-			<h3>header 프로젝트 디렉토리 : ${hpath }</h3>
-			<hr>
 		</div>
 	</section>
 </div>

@@ -8,13 +8,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.bupyeong.dao.NoticeDAO;
 import org.bupyeong.dto.Notice;
 
-/**
- * Servlet implementation class EditNoticeCtrl
- */
 @WebServlet("/EditNotice.do")
 public class EditNoticeCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -28,12 +26,22 @@ public class EditNoticeCtrl extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html); char-set=UTF-8");
 		
-		int no = Integer.parseInt(request.getParameter("no"));
-		NoticeDAO dao = new NoticeDAO();
-		Notice noti = new Notice();
-		noti = dao.getNotice2(no);
-		request.setAttribute("noti", noti);
-		RequestDispatcher view = request.getRequestDispatcher("/notice/editNotice.jsp");
-		view.forward(request, response);
+		HttpSession session = request.getSession();
+		String loginId = (String) session.getAttribute("sid");
+		
+		if(!loginId.equals("admin")) {
+			response.sendRedirect("/NotiList.do");
+		}
+		else {
+			int no = Integer.parseInt(request.getParameter("no"));
+			
+			NoticeDAO dao = new NoticeDAO();
+			Notice noti = new Notice();
+			noti = dao.getNotice2(no);
+			
+			request.setAttribute("noti", noti);
+			RequestDispatcher view = request.getRequestDispatcher("/notice/editNotice.jsp");
+			view.forward(request, response);
+		}
 	}	
 }
