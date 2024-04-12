@@ -8,10 +8,17 @@
     <fullyQualifiedTypeName name="org.bupyeong.dto.Notice"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="org.bupyeong.dao.MemberDAO"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.bupyeong.dto.Member"/>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="org.json.JSONObject"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="org.bupyeong.dao.QnaDAO"/>
+    <fullyQualifiedTypeName name="org.bupyeong.dto.Traffic"/>
+    <fullyQualifiedTypeName name="org.bupyeong.dto.TrafficVO"/>
+    <fullyQualifiedTypeName name="org.bupyeong.ctrl.tour.GetTrafficListCtrl"/>
+    <fullyQualifiedTypeName name="org.bupyeong.dao.TrafficDao"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 </qualifiedTypeNameHistroy>

@@ -20,6 +20,20 @@ public interface SqlLang {
 	String UPDATE_MEMBER = "update member set pw=?, name=?, email=?, tel=? where id=?";
 	String DELETE_MEMBER = "delete from member where id=?";
 	
+	String LATEST_QNA = "select * from (select * from qna order by parno desc, plevel asc) where rownum<=5";
+	String SELECT_ALL_QNA = "select * from qna order by parno desc, plevel asc";
+	String SELECT_QNA_BYNO = "select * from qna where no=?";
+	String DELETE_ANSWER = "delete from qna where no=?";
+	String DELETE_QUESTION = "delete from qna where parno=?";
+	String UPDATE_QNA = "update qna set title=?, content=? where no=?";
+	String INSERT_ANSWER = "insert into qna values(qseq.nextval, 2, ?, ?, ?, default, 0, ?)";
+	String INSERT_QUESTION = "insert into qna values(qseq.nextval, 1, null, ?, ?, default, 0, ?)";
+	String UPDATE_PARNO_QUESTION = "update qna set parno=qseq.currval where no = (select * from (select no from qna order by no desc) where rownum<=1)";
+	String VISITED_UPDATE_QNA = "update qna set visited=visited+1 where no=?";
+	
+	String SELECT_ALL_TRAFFIC = "select * from traffic order by ttype desc, no asc";
+	
+	
 	Connection connect();
 	void close(Connection con, PreparedStatement pstmt);
 	void close(Connection con, PreparedStatement pstmt, ResultSet rs);

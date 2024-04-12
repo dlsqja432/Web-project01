@@ -11,6 +11,9 @@
 		<c:if test="${not empty sid }">
 		<h2 style="text-align:center;">${sname } 님 환영합니다.</h2>
 		</c:if>
+		<c:if test="${empty sid }">
+		<h2 style="text-align:center;">모든 서비스를 활용시 로그인 요망</h2>
+		</c:if>
 	</div>
 	<nav id="gnb">
 		<ul class="">
@@ -22,7 +25,7 @@
 					<li><a href="${hpath }/member/term.jsp">회원가입</a></li>
 					</c:if>
 					<c:if test="${not empty sid }">
-					<li><a href="${hpath }/LogOut.do">로그아웃</a></li>
+					<li><a href="${hpath }/Logout.do">로그아웃</a></li>
 					<li><a href="${hpath }/EditMember.do?id=${sid }">회원정보</a></li>
 					</c:if>
 					<c:if test="${sid.equals('admin') }">
@@ -44,7 +47,7 @@
 			<li class="item">
 				<a href="" class="dp1">이용안내</a>
 				<ul class="sub_menu">
-					<li><a href="${hpath }/tour/traffic.jsp">교통편 안내</a></li>
+					<li><a href="${hpath }/GetTrafficList.do">교통편 안내</a></li>
 					<li><a href="${hpath }/tour/building.jsp">주요 빌딩</a></li>
 					<li><a href="${hpath }/tour/association.jsp">주요 협회 단체</a></li>
 					<li><a href="${hpath }/tour/rest.jsp">맛집 안내</a></li>
@@ -56,7 +59,7 @@
 				<ul class="sub_menu">
 					<li><a href="${hpath }/NotiList.do">공지사항</a></li>
 					<li><a href="">자료실</a></li>
-					<li><a href="">묻고답하기</a></li>
+					<li><a href="${hpath }/GetQnaList.do">묻고답하기</a></li>
 				</ul>
 			</li>
 		</ul>
