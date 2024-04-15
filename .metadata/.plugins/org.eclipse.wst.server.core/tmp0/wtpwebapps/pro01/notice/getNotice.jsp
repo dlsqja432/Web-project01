@@ -22,6 +22,16 @@
 </div>
 <div id="contents" class="container-fluid">
 	<section class="page" id="page1">
+		<div style="width:1400px; margin:0 auto;">
+			<nav aria-label="breadcrumb d-flex justify-content-between">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><a href="#">Home</a></li>
+			    <li class="breadcrumb-item"><a href="#">공지사항</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">공지사항 상세보기</li>
+			  </ol>
+			</nav>
+		</div>
+		<hr>
 		<div style="width:1400px; margin:0 auto">
 			<h3 class="page_title">공지사항 상세보기</h3>
 			<div>
@@ -54,7 +64,7 @@
 				<c:if test="${sid.equals('admin') }">
  					<a href="${path0 }/notice/noti_ins.jsp" class="btn btn-secondary">글 등록</a>
  					<a href="${path0 }/EditNotice.do?no=${noti.no }" class="btn btn-secondary">글 수정</a>
- 					<a href="${path0 }/DelNotice.do?no=${noti.no }" class="btn btn-secondary">글 삭제</a>
+ 					<a href="${path0 }/DelNotice.do?no=${noti.no }" class="btn btn-danger">글 삭제</a>
  					<a href="${path0 }/NotiList.do" class="btn btn-secondary">글 목록</a>
  				</c:if>
 				</div>

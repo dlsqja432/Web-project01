@@ -47,7 +47,7 @@ th.item4 { width:15% }
 			<hr>
 			<div class="tab_box">
 				<c:forEach var="vo" items="${voList }" >
-				<a href="#${vo.no }">${dto.no }</a>&nbsp;&nbsp;&nbsp;
+				<a href="#${vo.no }">${vo.no }</a>&nbsp;&nbsp;&nbsp;
 				</c:forEach>
 			</div>
 			<div>

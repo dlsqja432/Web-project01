@@ -23,7 +23,7 @@ public class DelQuestionCtrl extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; char-set=UTF-8");
 		
-		int parno = Integer.parseInt(request.getParameter("parno"));
+		int parno = Integer.parseInt(request.getParameter("no"));
 		
 		QnaDAO dao = new QnaDAO();
 		int cnt = dao.delQuestion(parno);

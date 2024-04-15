@@ -55,11 +55,20 @@ th.item3 { width:20%; }
 			</div>
 			<hr>
 			<h3 class="page_title">오시는 길</h3>
-			<div style="padding-bottom:3rem">
+			<div style="padding-bottom:3rem" class="text-center">
 				<p>
-					<img src="${path0 }/images/map3.png" alt="가산동지도" />
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25327.128583120717!2d126.72134878259918!3d37.48689677021478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sko!2skr!4v1713151629011!5m2!1sko!2skr" width="1400" height="768" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</p>
 			</div>
+			<hr>
+			<p>
+			<i class="fas fa-map-marker-alt">&nbsp;</i><strong> 주소 </strong>&nbsp;&nbsp;&nbsp;[21354] 인천광역시 부평구 부평대로 168 (부평동) &nbsp;&nbsp;&nbsp;|  &nbsp;&nbsp;&nbsp;
+			<i class="fas fa-phone-volume">&nbsp;</i><strong> 연락처 </strong>&nbsp;&nbsp;&nbsp; 032-504-2114
+			</p>
+			<hr><br>
+			<ul>
+				<li></li>
+			</ul>
 			<div class="">
 			</div>
 		</div>

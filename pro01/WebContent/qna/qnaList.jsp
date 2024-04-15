@@ -56,7 +56,7 @@ th.item4 { width:15% }
 					 	<c:if test="${not empty qnaList }">
 						 	<c:forEach var="dto" items="${qnaList }" varStatus="status">
 						 	<tr>
-						 		<td>${fn:length(qnaList) - status.count }</td>
+						 		<td>${fn:length(qnaList) - status.count + 1 }</td>
 						 		<td>
 						 			<c:if test="${empty sid }">
 						 				<c:if test="${dto.plevel==1 }">

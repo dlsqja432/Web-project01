@@ -25,7 +25,7 @@ public class DelAnswerCtrl extends HttpServlet {
 		int no = Integer.parseInt(request.getParameter("no"));
 		
 		QnaDAO dao = new QnaDAO();
-		int cnt = dao.delQuestion(no);
+		int cnt = dao.delAnswer(no);
 		
 		if(cnt>=1) {
 			response.sendRedirect("/pro01/GetQnaList.do");

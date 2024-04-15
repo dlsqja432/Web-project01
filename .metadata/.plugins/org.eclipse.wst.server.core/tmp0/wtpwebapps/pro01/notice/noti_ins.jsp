@@ -22,6 +22,16 @@
 </div>
 <div id="contents" class="container-fluid">
 	<section class="page" id="page1">
+		<div style="width:1400px; margin:0 auto;">
+			<nav aria-label="breadcrumb d-flex justify-content-between">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><a href="#">Home</a></li>
+			    <li class="breadcrumb-item"><a href="#">공지사항</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">공지사항 글 등록</li>
+			  </ol>
+			</nav>
+		</div>
+		<hr>
 		<div style="width:1400px; margin:0 auto">
 			<h3 class="page_title">공지사항 글 등록</h3>
 			<form action="${path0 }/NotiIns.do" method="post">
@@ -45,6 +55,7 @@
 				<hr>
 				<div class="btn-group">
  					<button type="submit" class="btn btn-secondary">글 등록</button>
+ 					<a href="${path0 }/NotiList.do" class="btn btn-secondary">글 목록</a>
 				</div>
 			</form>
 		</div>

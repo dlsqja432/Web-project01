@@ -12,7 +12,7 @@
 <style>
 .container { width:1400px; }
 .page { clear:both; height:100vh; }
-#page1 { background-color:#ececec; height:calc(100vh - 158px); }
+#page1 { background-color:#ececec; min-height:calc(100vh - 158px); }
 #page2 { background-color:#ffffff; }
 #page3 { background-color:#ececec; }
 #page4 { background-color:#ffffff; }
@@ -65,37 +65,48 @@ border-radius:45px; text-align:center; color:#fff; }
 			<h3 class="page_title">연혁</h3>
 			<div class="jumbotron" style="padding:1rem;">
 				<p>
-					<span>금천현 동면 가리산리</span> <i class="fas fa-arrow-circle-right fa-fw"></i> 
-					<span>시흥현 동면 가리봉리</span> <i class="fas fa-arrow-circle-right fa-fw"></i> 
-					<span>시흥군 동면 가리봉리</span> <i class="fas fa-arrow-circle-right fa-fw"></i>
-					<span>서울 영등포구 가리봉동</span> <i class="fas fa-arrow-circle-right fa-fw"></i>
-					<span>서울 구로구 가리봉동</span> <i class="fas fa-arrow-circle-right fa-fw"></i>
-					<span>서울 금천구 가산동</span>
+					<span>경기도 부천군 부내면 대정리</span> <i class="fas fa-arrow-circle-right fa-fw"></i> 
+					<span>경기도 인천부 부평동</span> <i class="fas fa-arrow-circle-right fa-fw"></i>
+					<span>경기도 인천시 부평동</span> <i class="fas fa-arrow-circle-right fa-fw"></i>
+					<span>경기도 인천시 북구 부평1동</span>  <i class="fas fa-arrow-circle-right fa-fw"></i>
+					<span>인천직할시 북구 부평1동</span> <i class="fas fa-arrow-circle-right fa-fw"></i>
+					<span>인천광역시 북구 부평1동</span> <i class="fas fa-arrow-circle-right fa-fw"></i>
+					<span>인천광역시 부평구 부평1동</span> 
 				</p>
 			</div>
 			<div class="loadmap">
 				<ul>
 					<li>
-						<div class="his">1. 금천현 동면 가리산리(衿川縣 東面 加里山里) 으로 관할하는 현으로 금천현에 배속됨</div>
-						<div class="circle">1759</div>
+						<div class="his">본래 부평도호부 동소정면 대정리(大井里) 지역으로, 1914년에 부천군 부내면에 편입되었다.</div>
+						<div class="circle">1914</div>
 					</li>
 					<li>
-						<div class="his">1. 시흥현 동면 가리봉리(始興縣 東面 加里峰里) 으로 시흥현으로 관할현이 변경됨<br>
-							2. 시흥군 동면 가리봉리(始興郡 東面 加里峰里) 으로 시흥현이 시흥군으로 승격됨
-						</div>
-						<div class="circle">1895</div>
+						<div class="his">인천부에 편입되어 소화정(昭和町)이라고 하였다. 1946년에 부평동으로 개칭하였다.</div>
+						<div class="circle">1946</div>
 					</li>
 					<li>
-						<div class="his">1. 서울특별시 영등포구 가리봉동(永登浦區 加里峰洞) 으로 서울특별시로 편입됨</div>
-						<div class="circle">1963</div>
+						<div class="his">법률 제8호에 의거 인천시로 되고 부평·서곳지청을 출장소로 환원</div>
+						<div class="circle">1948</div>
 					</li>
 					<li>
-						<div class="his">1. 서울특별시 구로구 가리봉동(九老區 加里峰洞) 으로 관할구청이 변경됨</div>
-						<div class="circle">1980</div>
+						<div class="his">법률 제1919호에 의거 부평·서곳출장소를 통합 →"북구"로 명명</div>
+						<div class="circle">1968</div>
 					</li>
 					<li>
-						<div class="his">1. 서울특별시 구로구 가리봉동(九老區 加里峰洞) 과 서울특별시 금천구 가산동(衿川區 加山洞) 으로 분동</div>
+						<div class="his">법률 제3424호에 의거 인천직할시로 승격</div>
+						<div class="circle">1981</div>
+					</li>
+				</ul>
+			</div>
+			<div class="loadmap">
+				<ul>
+					<li>
+						<div class="his">법률 제4802호에 의거 인천광역시로 승격</div>
 						<div class="circle">1995</div>
+					</li>
+					<li>
+						<div class="his">북구에서 명칭이 바뀐 부평구에 편입되었다.</div>
+						<div class="circle">1996</div>
 					</li>
 				</ul>
 			</div>

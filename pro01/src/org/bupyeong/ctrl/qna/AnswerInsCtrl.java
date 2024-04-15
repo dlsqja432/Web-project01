@@ -33,7 +33,7 @@ public class AnswerInsCtrl extends HttpServlet {
 		qna.setContent(request.getParameter("content"));
 		qna.setAid(aid);
 		QnaDAO dao = new QnaDAO();
-		int cnt = dao.insQuestion(qna);
+		int cnt = dao.insAnswer(qna);
 		if(cnt >= 1) {
 			response.sendRedirect("/pro01/GetQnaList.do");
 		} else {
