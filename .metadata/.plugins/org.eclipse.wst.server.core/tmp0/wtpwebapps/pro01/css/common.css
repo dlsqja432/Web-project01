@@ -9,7 +9,7 @@ margin:15px auto; }
 #gnb ul { list-style:none; }
 #gnb .item { float:left; width:25%; position:relative; }
 #gnb a.dp1 { display:block; line-height:38px; text-align:center; 
-background-color:#333; color:#fff; }
+background-color:#ffe4b5; color:#fff; }
 #gnb .sub_menu { display:none; position:absolute; top:38px; left:0px; 
 padding:0; width:100%; z-index:999; }
 #gnb .item:hover .sub_menu { display:block; }

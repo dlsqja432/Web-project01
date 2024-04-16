@@ -33,6 +33,13 @@ public interface SqlLang {
 	
 	String SELECT_ALL_TRAFFIC = "select * from traffic order by ttype desc, no asc";
 	
+	String DELETE_BOARD = "delete from board where no=?";
+	String UPDATE_BOARD = "update board set title=?, content=? where no=?";
+	String INSERT_BOARD = "insert into board values(bseq.nextval, ?, ?, default, 0, ?)";
+	String SELECT_BOARD_BYNO = "select * from board where no=?";
+	String VISITED_UPDATE_BOARD = "update board set visited=visited+1 where no=?";
+	String SELECT_ALL_BOARD = "select * from board order by no desc";
+	
 	
 	Connection connect();
 	void close(Connection con, PreparedStatement pstmt);

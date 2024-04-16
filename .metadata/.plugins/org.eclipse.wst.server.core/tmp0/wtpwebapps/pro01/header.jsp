@@ -39,7 +39,7 @@
 				<a href="" class="dp1">지역소개</a>
 				<ul class="sub_menu">
 					<li><a href="${hpath }/intro/origin.jsp">지명유래</a></li>
-					<li><a href="${hpath }/intro/facility.jsp">지역 특징 및 시설안내</a></li>
+					<li><a href="${hpath }/intro/facility.jsp">지역 특징</a></li>
 					<li><a href="${hpath }/intro/history.jsp">연혁</a></li>
 					<li><a href="${hpath }/intro/map.jsp">오시는 길</a></li>
 				</ul>
@@ -58,6 +58,7 @@
 				<a href="" class="dp1">커뮤니티</a>
 				<ul class="sub_menu">
 					<li><a href="${hpath }/NotiList.do">공지사항</a></li>
+					<li><a href="${hpath }/BoardList.do">자유게시판</a>/a></li>
 					<li><a href="">자료실</a></li>
 					<li><a href="${hpath }/GetQnaList.do">묻고답하기</a></li>
 				</ul>
