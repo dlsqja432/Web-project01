@@ -11,8 +11,8 @@
 <meta name="subject" content="부평동 소개(Bupyeongdong Intro)" />
 <meta name="description" content="부평동, 문화의 거리, 맛집, 교통, 소개" />
 <meta name="keywords" content="부평동, 문화의 거리, 맛집, 교통, 소개" />
-<link rel="icon" href="${ipath }/images/favicon.ico" />
-<link rel="shortcut icon" href="${ipath }/images/favicon.ico" />
+<link rel="icon" href="${ipath }/images/favicon.png" />
+<link rel="shortcut icon" href="${ipath }/images/favicon.png" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="bupyeongdong" />
 <meta property="og:description" content="부평동, 문화의 거리, 맛집, 교통, 소개" />

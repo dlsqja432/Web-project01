@@ -126,7 +126,7 @@ th.item3 { width:20%; }
 				<img src="${path0 }/images/bupyeongMap.png" class="rounded mx-auto d-block" alt="부평동 지도">
 			</figure>
 		</div>
-	</section>	
+	</section>
 </div>
 <div id="footer">
 	<%@ include file="/footer.jsp" %>

@@ -33,8 +33,8 @@ th.item4 { width:15% }
 			<nav aria-label="breadcrumb" style="text-align:right">
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item"><a href="#">Home</a></li>
-			    <li class="breadcrumb-item"><a href="${path0 }/GetQnaList.do">질문 및 답변</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">질문 및 답변 목록</li>
+			    <li class="breadcrumb-item"><a href="${path0 }/BoardList.do">자유게시판</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">자유게시판 글 목록</li>
 			  </ol>
 			</nav>
 			<hr>
@@ -59,18 +59,10 @@ th.item4 { width:15% }
 						 		<td>${dto.no }</td>
 						 		<td>
 						 			<c:if test="${empty sid }">
-						 				<c:if test="${dto.plevel==1 }">
 						 				<strong>${dto.title }</strong>
-						 				</c:if>
-						 				<c:if test="${dto.plevel==2 }">
-						 				<strong style="padding-left:40px">[답변] ${dto.title }</strong>
-						 				</c:if>
 						 			</c:if>
-						 			<c:if test="${not empty sid and dto.plevel==1 }">
-						 			<a href="${path0 }/GetQna.do?no=${dto.no }">${dto.title }</a>
-						 			</c:if>
-						 			<c:if test="${not empty sid and dto.plevel==2 }">
-						 			<a href="${path0 }/GetQna.do?no=${dto.no }"><span style="padding-left:40px">[답변] </span>${dto.title }</a>
+						 			<c:if test="${not empty sid}">
+						 				<a href="${path0 }/GetBoard.do?no=${dto.no }">${dto.title }</a>
 						 			</c:if>
 						 		</td>
 						 		<td>
@@ -83,9 +75,9 @@ th.item4 { width:15% }
 						 	</tr>
 						 	</c:forEach>
 						 </c:if>
-						 <c:if test="${empty qnaList }">
+						 <c:if test="${empty boardList }">
 						 	<tr>
-						 		<td colspan="5"><strong>질문이 존재하지 않습니다.</strong></td>
+						 		<td colspan="5"><strong>게시글이 존재하지 않습니다.</strong></td>
 						 	</tr>
 						 </c:if>
 					 </tbody>
@@ -99,9 +91,10 @@ th.item4 { width:15% }
 				</script>
 				<hr>
 				<c:if test="${not empty sid }">
-				<div class="btn-group">
- 					<a href="${path0 }/qna/qna_ins.jsp" class="btn btn-secondary">질문 등록</a>
-				</div>
+					<div class="btn-group">
+	 					<a href="${path0 }/board/board_ins.jsp" class="btn btn-secondary">글 등록</a>
+	 					<button type="submit" class="btn btn-secondary">등록</button>
+					</div>
 				</c:if>
 			</div>
 		</div>

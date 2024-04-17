@@ -26,16 +26,14 @@
 			<nav aria-label="breadcrumb" style="text-align:right">
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item"><a href="#">Home</a></li>
-			    <li class="breadcrumb-item"><a href="${path0 }/GetQnaList.do">질문 및 답변</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">글 수정</li>
+			    <li class="breadcrumb-item"><a href="${path0 }/BoardList.do">자유게시판</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">게시글 수정</li>
 			  </ol>
 			</nav>
 			<hr>
 		</div>
 		<div style="width:1400px; margin:0 auto">
-			<c:if test="${qna.plevel==1 }">
-			<h3 class="page_title">질문 수정</h3>
-			</c:if>
+			<h3 class="page_title">게시글 수정</h3>
 			<c:if test="${qna.plevel==2 }">
 			<h3 class="page_title">답변 수정</h3>
 			</c:if>
@@ -69,8 +67,6 @@
 						</tr>
 					 </tbody>
 				</table>
-				<p>작성 일시 : ${qna.resdate }</p>
-				<p>조회수 : ${qna.visited }</p>
 				<hr>
 				<div class="btn-group">
  					<button type="submit" class="btn btn-secondary">질문 및 답변 수정</button>

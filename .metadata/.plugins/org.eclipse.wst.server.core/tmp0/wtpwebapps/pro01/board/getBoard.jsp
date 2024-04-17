@@ -11,7 +11,7 @@
 <%@ include file="/head.jsp" %>
 <style>
 .container {width:1400px; }
-.page { clear:both; height:100vh; }
+.page { clear:both; height:100vh; margin:0; padding:0;}
 .page_title { font-size:36px; padding-top:2em; text-align:center; }
 #page1 { background-color:#ececec }
 </style>
@@ -22,60 +22,89 @@
 </div>
 <div id="contents" class="container-fluid">
 	<section class="page" id="page1">
-		<div style="width:1400px; margin:0 auto;">
+		<div style="width:1400px; margin:15px auto;">
 			<nav aria-label="breadcrumb" style="text-align:right">
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item"><a href="#">Home</a></li>
-			    <li class="breadcrumb-item"><a href="${path0 }/GetQnaList.do">질문 및 답변</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">질문 및 답변 상세보기</li>
+			    <li class="breadcrumb-item"><a href="${path0 }/BoardList.do">자유게시판</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">게시글 상세보기</li>
 			  </ol>
 			</nav>
 			<hr>
 		</div>
-		<div style="width:1400px; margin:0 auto">
-			<h3 class="page_title">질문 및 답변 상세보기</h3>
+		<div style="width:1400px; margin:0px auto">
+			<h3 class="page_title">${board.title }</h3>
 			<div>
 				<table class="table">
 					 <tbody>
 					 	<tr>
 					 		<th>글 번호</th>
-					 		<td>${qna.no }</td>
+					 		<td>${board.no }</td>
 					 	</tr>
 					 	<tr>
 					 		<th>글 제목</th>
-					 		<td>${qna.title }</td>
+					 		<td>${board.title }</td>
 					 	</tr>
 					 	<tr>
 					 		<th>글 내용</th>
-					 		<td>${qna.content }</td>
+					 		<td>${board.content }</td>
 					 	</tr>
 					 	<tr>
 					 		<th>작성일시</th>
-					 		<td>${qna.resdate }</td>
+					 		<td>${board.resdate }</td>
 					 	</tr>
 					 	<tr>
 					 		<th>조회수</th>
-					 		<td>${qna.visited }</td>
+					 		<td>${board.visited }</td>
 					 	</tr>
 					 </tbody>
 				</table>
 				<hr>
 				<div class="btn-group">
-				<c:if test="${(not empty sid) and qna.plevel == 1 }">
- 					<a href="${path0 }/qna/ans_ins.jsp?parno=${qna.no }" class="btn btn-secondary">답변 등록</a>
- 				</c:if>
-				<c:if test="${sid.equals(qna.aid) }">
-					<c:if test="${qna.plevel == 1 }">
- 					<a href="${path0 }/EditQna.do?no=${qna.no }" class="btn btn-secondary">질문 수정</a>
- 					<a href="${path0 }/DelQuestion.do?no=${qna.parno }" class="btn btn-danger">질문 삭제</a>
-					</c:if>
-					<c:if test="${qna.plevel == 2 }">
- 					<a href="${path0 }/EditQna.do?no=${qna.no }" class="btn btn-secondary">답변 수정</a>
- 					<a href="${path0 }/DelAnswer.do?no=${qna.no }" class="btn btn-danger">답변 삭제</a>
-					</c:if>
+				<c:if test="${sid.equals(board.aid) }">
+ 					<a href="${path0 }/EditBoard.do?no=${board.no }" class="btn btn-secondary">게시글 수정</a>
+ 					<a href="${path0 }/DelBoard.do?no=${board.no }" class="btn btn-danger">게시글 삭제</a>
 				</c:if>
- 				<a href="${path0 }/GetQnaList.do" class="btn btn-secondary">질문 및 답변목록</a>
+ 				<a href="${path0 }/BoardList.do" class="btn btn-secondary">게시글 목록</a>
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 댓글 기능 구현 -->	
+	<section class="page" id="page1">
+		<div style="width:1400px; margin:0px auto;">
+			<p><strong>의견 쓰기</strong></p>
+			<form action="${path0 }/ComentIns.do" method="post">
+				<div style="text-align: right;">
+					<input type="hidden" name="no" id="no" value="${board.no }">
+					<input type="hidden" name="aid" id="aid" value="${sid }">
+					<textarea name="content" id="content" rows="4" cols="80" class="form-control"></textarea><br>
+					<button type="submit" class="btn btn-secondary">등록</button>
+				</div>
+			</form>
+			<div style="width:1400px; margin:15px auto;">
+				<br>
+				<c:if test="${not empty comentList }">
+				<table class=table style="width: 1400px;">
+					<tbody>
+						<c:forEach var="dto" items="${comentList }" varStatus="status">
+						<tr>
+							<th style="width: 150px">${dto.aid }</th>
+							<td style="width: 1300px">${dto.content }<br><br>${dto.resdate }</td>
+							<td style="width: 80px">
+								<c:if test="${sid.equals(dto.aid) || sid.equals('admin') }">
+									<a href="/pro01/DelComent.do?cno=${dto.cno }&no=${board.no }" class="btn btn-danger">삭제</a>
+								</c:if>
+							</td>
+						</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+				</c:if>
+				<c:if test="${empty comentList}">
+					<p>댓글이 없습니다.</p>
+				</c:if>
 			</div>
 		</div>
 	</section>

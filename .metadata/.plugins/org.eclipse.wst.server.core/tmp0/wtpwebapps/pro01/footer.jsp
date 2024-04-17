@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <c:set var="fpath" value="<%=request.getContextPath() %>" />
 <hr>    
-<footer>
+<footer style="display: inline-block;">
 	<div class="ft_wrap">
 		<nav id="fnb">
 			<ul>

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.bupyeong.dto.Board;
-import org.bupyeong.dto.Qna;
+import org.bupyeong.dto.Coment;
 
 public class BoardDAO {
 	Connection con = null;
@@ -116,25 +116,6 @@ public class BoardDAO {
 		return cnt;
 	}
 	
-//	public int insAnswer(Qna qna) {
-//		int cnt = 0;
-//		OracleDB oracle = new OracleDB();
-//		try {
-//			con = oracle.connect();
-//			pstmt = con.prepareStatement(SqlLang.INSERT_ANSWER);
-//			pstmt.setInt(1, qna.getParno());
-//			pstmt.setString(2, qna.getTitle());
-//			pstmt.setString(3, qna.getContent());
-//			pstmt.setString(4,qna.getAid());
-//			cnt = pstmt.executeUpdate();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		} finally {
-//			oracle.close(con, pstmt);
-//		}
-//		return cnt;
-//	}
-
 	public int editBoard(Board board) {
 		int cnt = 0;
 		OracleDB oracle = new OracleDB();
@@ -169,19 +150,89 @@ public class BoardDAO {
 		return cnt;
 	}
 	
-//	public int delAnswer(int no) {
-//		int cnt = 0;
-//		OracleDB oracle = new OracleDB();
-//		try {
-//			con = oracle.connect();
-//			pstmt = con.prepareStatement(SqlLang.DELETE_ANSWER);
-//			pstmt.setInt(1, no);
-//			cnt = pstmt.executeUpdate();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		} finally {
-//			oracle.close(con, pstmt);
-//		}
-//		return cnt;
-//	}
+	public List<Coment> getComentList(int no) {
+		List<Coment> comentList = new ArrayList<>();
+		
+		OracleDB oracle = new OracleDB();
+		try {
+			con = oracle.connect();
+			pstmt = con.prepareStatement(SqlLang.SELECT_ALL_COMENT);
+			pstmt.setInt(1, no);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Coment coment = new Coment(rs.getInt("cno"),
+						rs.getInt("no"),
+						rs.getString("content"),
+						rs.getString("resdate"),
+						rs.getString("aid"));
+				comentList.add(coment);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			oracle.close(con, pstmt, rs);
+		}
+		
+		return comentList;
+	}
+	
+	public Coment getComent(int cno) {
+		Coment coment = new Coment();
+		OracleDB oracle = new OracleDB();
+		try {
+			con = oracle.connect();
+			pstmt = con.prepareStatement(SqlLang.SELECT_COMENT_BYCNO);
+			pstmt.setInt(1, cno);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				coment.setCno(cno);
+				coment.setNo(rs.getInt("no"));
+				coment.setContent(rs.getString("content"));
+				coment.setResdate(rs.getString("resdate"));
+				coment.setAid(rs.getString("aid"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			oracle.close(con, pstmt, rs);
+		}
+		
+		return coment;
+	}
+	
+	public int insComent(Coment coment) {
+		int cnt = 0;
+		OracleDB oracle = new OracleDB();
+		try {
+			con = oracle.connect();
+			pstmt = con.prepareStatement(SqlLang.INSERT_COMENT);
+			pstmt.setInt(1, coment.getNo());
+			pstmt.setString(2, coment.getContent());
+			pstmt.setString(3, coment.getAid());
+			cnt = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			oracle.close(con, pstmt);
+		}
+		return cnt;
+	}
+
+	public int delComent(int cno) {
+		int cnt = 0;
+		OracleDB oracle = new OracleDB();
+		try {
+			con = oracle.connect();
+			pstmt = con.prepareStatement(SqlLang.DELETE_COMENT);
+			pstmt.setInt(1, cno);
+			cnt = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			oracle.close(con, pstmt);
+		}
+		return cnt;
+	}
 }

@@ -26,15 +26,15 @@
 			<nav aria-label="breadcrumb" style="text-align:right">
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item"><a href="#">Home</a></li>
-			    <li class="breadcrumb-item"><a href="${path0 }/GetQnaList.do">질문 및 답변</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">질문 등록</li>
+			    <li class="breadcrumb-item"><a href="${path0 }/BoardList.do">자유게시판</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">자유게시판 글 등록</li>
 			  </ol>
 			</nav>
 			<hr>
 		</div>
 		<div style="width:1400px; margin:0 auto">
-			<h3 class="page_title">질문 등록</h3>
-			<form action="${path0 }/QuestionIns.do" method="post">
+			<h3 class="page_title">자유게시판 글 등록</h3>
+			<form action="${path0 }/BoardIns.do" method="post">
 				<table class="table">
 					 <tbody>
 					 	<tr>
@@ -53,8 +53,8 @@
 				</table>
 				<hr>
 				<div class="btn-group">
- 					<button type="submit" class="btn btn-secondary">질문 등록</button>
- 					<a href="${path0 }/GetQnaList.do" class="btn btn-secondary">질문 및 답변 목록</a>
+ 					<button type="submit" class="btn btn-secondary">게시글 등록</button>
+ 					<a href="${path0 }/BoardList.do" class="btn btn-secondary">게시글 목록</a>
 				</div>
 			</form>
 		</div>

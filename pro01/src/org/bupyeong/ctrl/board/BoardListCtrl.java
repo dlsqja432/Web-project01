@@ -31,7 +31,7 @@ public class BoardListCtrl extends HttpServlet {
 		List<Board> boardList = new ArrayList<>();
 		boardList = dao.getBoardList();
 		request.setAttribute("boardList", boardList);
-		RequestDispatcher view = request.getRequestDispatcher("/board/boardList");
+		RequestDispatcher view = request.getRequestDispatcher("/board/boardList.jsp");
 		view.forward(request, response);
 	}
 }

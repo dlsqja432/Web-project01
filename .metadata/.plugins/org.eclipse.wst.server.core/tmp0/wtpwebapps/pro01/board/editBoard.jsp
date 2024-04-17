@@ -27,55 +27,48 @@
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item"><a href="#">Home</a></li>
 			    <li class="breadcrumb-item"><a href="${path0 }/GetQnaList.do">질문 및 답변</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">글 수정</li>
+			    <li class="breadcrumb-item active" aria-current="page">게시글 수정</li>
 			  </ol>
 			</nav>
 			<hr>
 		</div>
 		<div style="width:1400px; margin:0 auto">
-			<c:if test="${qna.plevel==1 }">
-			<h3 class="page_title">질문 수정</h3>
-			</c:if>
-			<c:if test="${qna.plevel==2 }">
-			<h3 class="page_title">답변 수정</h3>
-			</c:if>
-			<form action="${path0 }/EditProQna.do" method="post">
+			<h3 class="page_title">게시글 수정</h3>
+			<form action="${path0 }/EditProBoard.do" method="post">
 				<table class="table">
 					 <tbody>
 					 	<tr>
 					 		<th><label for="title">제목</label></th>
 					 		<td>
-					 			<input type="hidden" name="no" id="no" value="${qna.no }">
-					 			<input type="text" name="title" id="title" class="form-control" value="${qna.title }" maxlength="100" required>
+					 			<input type="hidden" name="no" id="no" value="${board.no }">
+					 			<input type="text" name="title" id="title" class="form-control" value="${board.title }" maxlength="100" required>
 					 		</td>
 					 	</tr>
 					 	<tr>
 					 		<th><label for="content">내용</label></th>
 					 		<td>
-					 			<textarea name="content" id="content" rows="8" cols="80" class="form-control">${qna.content }</textarea>
+					 			<textarea name="content" id="content" rows="8" cols="80" class="form-control">${board.content }</textarea>
 					 		</td>
 					 	</tr>
 					 	<tr>
 							<th><label for="resdate">작성일시</label></th>
 							<td>
-								<input type="text" name="resdate" id="resdate" class="form-control" value="${qna.resdate }" disabled>
+								<input type="text" name="resdate" id="resdate" class="form-control" value="${board.resdate }" disabled>
 							</td>
 						</tr>
 						<tr>
 							<th><label for="visited">읽은횟수</label></th>
 							<td>
-								<input type="text" name="visited" id="visited" class="form-control" value="${qna.visited }" disabled>
+								<input type="text" name="visited" id="visited" class="form-control" value="${board.visited }" disabled>
 							</td>
 						</tr>
 					 </tbody>
 				</table>
-				<p>작성 일시 : ${qna.resdate }</p>
-				<p>조회수 : ${qna.visited }</p>
 				<hr>
 				<div class="btn-group">
- 					<button type="submit" class="btn btn-secondary">질문 및 답변 수정</button>
- 					<a href="${path0 }/GetQnaList.do" class="btn btn-secondary">질문 및 답변목록</a>
- 					<a href="${path0 }/GetQna.do?no=${qna.no}" class="btn btn-secondary">질문 및 답변 상세보기</a>
+ 					<button type="submit" class="btn btn-secondary">게시글 수정</button>
+ 					<a href="${path0 }/BoardList.do" class="btn btn-secondary">게시글 목록</a>
+ 					<a href="${path0 }/GetBoard.do?no=${board.no}" class="btn btn-secondary">게시글 상세보기</a>
 				</div>
 			</form>
 		</div>

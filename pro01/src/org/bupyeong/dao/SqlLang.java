@@ -39,6 +39,10 @@ public interface SqlLang {
 	String SELECT_BOARD_BYNO = "select * from board where no=?";
 	String VISITED_UPDATE_BOARD = "update board set visited=visited+1 where no=?";
 	String SELECT_ALL_BOARD = "select * from board order by no desc";
+	String SELECT_COMENT_BYCNO = "select * from coment where cno=?";
+	String INSERT_COMENT = "insert into coment values(cseq.nextval, ?, ?, default, ?)";
+	String SELECT_ALL_COMENT = "select * from coment where no=? order by cno";
+	String DELETE_COMENT = "delete from coment where cno=?";
 	
 	
 	Connection connect();
