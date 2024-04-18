@@ -66,11 +66,6 @@ th.item3 { width:20%; }
 			<i class="fas fa-phone-volume">&nbsp;</i><strong> 연락처 </strong>&nbsp;&nbsp;&nbsp; 032-504-2114
 			</p>
 			<hr><br>
-			<ul>
-				<li></li>
-			</ul>
-			<div class="">
-			</div>
 		</div>
 	</section>
 </div>

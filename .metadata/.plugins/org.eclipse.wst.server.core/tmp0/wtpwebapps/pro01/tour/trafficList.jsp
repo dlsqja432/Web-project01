@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
 <c:set var="path0" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
@@ -13,7 +14,7 @@
 <link rel="stylesheet" href="${path0 }/css/jquery.dataTables.css">
 <style>
 .container {width:1400px; }
-.page { clear:both; height:100vh; }
+.page { clear:both; min-height:70vh;}
 .page_title { font-size:36px; padding-top:2em; text-align:center; }
 #page1 { background-color:#ececec min-height:200vh; }
 th.item1 { width:5% }
@@ -46,13 +47,13 @@ th.item4 { width:15% }
 			<h3 class="page_title">교통편 안내</h3>
 			<hr>
 			<div class="tab_box">
-				<c:forEach var="vo" items="${voList }" >
-				<a href="#${vo.no }">${vo.no }</a>&nbsp;&nbsp;&nbsp;
+				<c:forEach var="vo" items="${voList }" varStatus="status">
+					<a href="#${vo.no }">${vo.no }</a>&nbsp;&nbsp;&nbsp;
 				</c:forEach>
 			</div>
 			<div>
-				<c:forEach var="dto" items="${tList }" >
-				<ul class="tour">
+				<c:forEach var="dto" items="${tList }" varStatus="status">
+				<ul class="tour" id="${dto.no }">
 					<c:if test="${dto.ttype.equals('버스') }">
 					<li class="tour_no">${dto.no }번</li>
 					</c:if>
@@ -62,10 +63,10 @@ th.item4 { width:15% }
 					<li class="tour_image">
 						<figure class="fg">
 							<c:if test="${dto.ttype.equals('버스') }">
-							<img src="${path0 }/images/bus/${dto.no }_1.jpg" alt="번 버스 사진">
+							<img src="${path0 }/images/bus/${dto.no }_1.png" alt="${dto.no }번 버스 사진">
 							</c:if>
 							<c:if test="${dto.ttype.equals('지하철') }">
-							<img src="${path0 }/images/subway/${dto.no }_1.jpg" alt="호선 지하철 사진">
+							<img src="${path0 }/images/subway/${dto.no }_1.png" alt="${dto.no }호선 지하철 사진">
 							</c:if>
 						</figure>
 					</li>
@@ -75,10 +76,10 @@ th.item4 { width:15% }
 					<li class="tour_route_pic">
 						<figure class="fg">
 							<c:if test="${dto.ttype.equals('버스') }">
-							<img src="${path0 }/images/bus/${dto.no }_2.jpg" alt="번 버스 사진">
+								<img src="${path0 }/images/bus/${dto.no }_2.png" alt="${dto.no }번 버스 사진">
 							</c:if>
 							<c:if test="${dto.ttype.equals('지하철') }">
-							<img src="${path0 }/images/subway/${dto.no }_2.jpg" alt="호선 지하철 사진">
+								<img src="${path0 }/images/subway/${dto.no }_2.png" alt="${dto.no }호선 지하철 사진">
 							</c:if>
 						</figure>
 					</li>

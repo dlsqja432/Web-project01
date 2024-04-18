@@ -10,10 +10,13 @@
 <title>${title }</title>
 <%@ include file="/head.jsp" %>
 <style>
-.container {width:1400px; }
-.page { clear:both; height:100vh; margin:0; padding:0;}
+.container { width:1400px; }
+.page { clear:both; min-height:100vh; margin:0; padding:0; }
+#page1 { background-color:#ececec; min-height:calc(100vh - 158px);}
+#page2 { background-color:#ffffff; }
+#page3 { background-color:#ececec; }
+#page4 { background-color:#ffffff; }
 .page_title { font-size:36px; padding-top:2em; text-align:center; }
-#page1 { background-color:#ececec }
 </style>
 </head>
 <body>
@@ -73,13 +76,13 @@
 
 	<!-- 댓글 기능 구현 -->	
 	<section class="page" id="page1">
-		<div style="width:1400px; margin:0px auto;">
-			<p><strong>의견 쓰기</strong></p>
+		<div style="width:1400px; margin:15px auto; padding:10px;">
+			<p style="margin:10px;"><strong>의견 쓰기</strong></p>
 			<form action="${path0 }/ComentIns.do" method="post">
 				<div style="text-align: right;">
 					<input type="hidden" name="no" id="no" value="${board.no }">
 					<input type="hidden" name="aid" id="aid" value="${sid }">
-					<textarea name="content" id="content" rows="4" cols="80" class="form-control"></textarea><br>
+					<textarea name="content" id="content" rows="4" cols="80" class="form-control" placeholder="댓글을 입력해 주세요."></textarea><br>
 					<button type="submit" class="btn btn-secondary">등록</button>
 				</div>
 			</form>

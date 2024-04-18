@@ -34,7 +34,7 @@ th.item4 { width:15% }
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item"><a href="#">Home</a></li>
 			    <li class="breadcrumb-item"><a href="${path0 }/BoardList.do">자유게시판</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">자유게시판 글 목록</li>
+			    <li class="breadcrumb-item active" aria-current="page">게시글 목록</li>
 			  </ol>
 			</nav>
 			<hr>
@@ -93,7 +93,6 @@ th.item4 { width:15% }
 				<c:if test="${not empty sid }">
 					<div class="btn-group">
 	 					<a href="${path0 }/board/board_ins.jsp" class="btn btn-secondary">글 등록</a>
-	 					<button type="submit" class="btn btn-secondary">등록</button>
 					</div>
 				</c:if>
 			</div>
