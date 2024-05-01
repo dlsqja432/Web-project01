@@ -29,8 +29,8 @@ public class EditBoardCtrl extends HttpServlet {
 		
 		BoardDAO dao = new BoardDAO();
 		Board board = dao.getBoard2(no);
-		request.setAttribute("board", board);
 		
+		request.setAttribute("board", board);
 		RequestDispatcher view = request.getRequestDispatcher("/board/editBoard.jsp");
 		view.forward(request, response);
 	}

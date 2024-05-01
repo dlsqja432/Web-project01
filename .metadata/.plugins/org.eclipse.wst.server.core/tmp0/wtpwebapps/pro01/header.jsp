@@ -59,8 +59,9 @@
 				<ul class="sub_menu">
 					<li><a href="${hpath }/NotiList.do">공지사항</a></li>
 					<li><a href="${hpath }/BoardList.do">자유게시판</a></li>
-					<li><a href="">자료실</a></li>
+					<li><a href="${hpath }/DataList.do">자료실</a></li>
 					<li><a href="${hpath }/GetQnaList.do">묻고답하기</a></li>
+					<li><a href="${hpath }/qna/online.jsp">온라인 상담</a></li>
 				</ul>
 			</li>
 		</ul>

@@ -22,4 +22,13 @@
     <fullyQualifiedTypeName name="org.bupyeong.ctrl.board.EditBoardCtrl"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.bupyeong.util.AES256"/>
+    <fullyQualifiedTypeName name="org.bupyeong.dto.Data"/>
+    <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
+    <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
+    <fullyQualifiedTypeName name="java.util.Enumeration"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="javax.mail.Authenticator"/>
+    <fullyQualifiedTypeName name="java.net.PasswordAuthentication"/>
+    <fullyQualifiedTypeName name="javax.mail.PasswordAuthentication"/>
 </qualifiedTypeNameHistroy>

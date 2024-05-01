@@ -1,7 +1,6 @@
 package org.bupyeong.ctrl.member;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.bupyeong.dao.MemberDAO;
 import org.bupyeong.dto.Member;
+import org.bupyeong.util.AES256;
 
 @WebServlet("/JoinPro.do")
 public class JoinProCtrl extends HttpServlet {
@@ -24,11 +24,22 @@ public class JoinProCtrl extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; char-set=UTF-8");
 		
+		String pw = request.getParameter("pw");
+		String key = "%02x";
+		String enPw = "";
+		try {
+			enPw = AES256.encryptAES256(pw, key);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		
 		Member mem = new Member(request.getParameter("id"),
-				request.getParameter("pw"),
+				enPw,
 				request.getParameter("name"),
 				request.getParameter("email"),
-				request.getParameter("tel"));
+				request.getParameter("tel"),
+				request.getParameter("address1") + " $ " + request.getParameter("address2"),
+				request.getParameter("postcode"));
 		
 		MemberDAO dao = new MemberDAO();
 		int cnt = dao.join(mem);

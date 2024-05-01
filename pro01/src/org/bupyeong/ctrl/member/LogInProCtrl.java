@@ -2,7 +2,6 @@ package org.bupyeong.ctrl.member;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import org.bupyeong.dao.MemberDAO;
 import org.bupyeong.dto.Member;
+import org.bupyeong.util.AES256;
 
 @WebServlet("/LogInPro.do")
 public class LogInProCtrl extends HttpServlet {
@@ -37,6 +37,13 @@ public class LogInProCtrl extends HttpServlet {
 		HttpSession session = request.getSession();
 		PrintWriter out = response.getWriter();
 		RequestDispatcher view;
+		
+		String key = "%02x";
+		try {
+			mem.setPw(AES256.decryptAES256(mem.getPw(), key));
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
 		
 		if(id.equals(mem.getId()) && pw.equals(mem.getPw())) {	// ·Î±×ÀÎ
 			session.setAttribute("sid", mem.getId());

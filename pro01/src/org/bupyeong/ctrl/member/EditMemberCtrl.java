@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.bupyeong.dao.MemberDAO;
 import org.bupyeong.dto.Member;
+import org.bupyeong.util.AES256;
 
 @WebServlet("/EditMember.do")
 public class EditMemberCtrl extends HttpServlet {
@@ -28,6 +29,13 @@ public class EditMemberCtrl extends HttpServlet {
 		String id = request.getParameter("id");
 		MemberDAO dao = new MemberDAO();
 		Member mem = dao.getMember(id);
+		
+		String key = "%02x";
+		try {
+			mem.setPw(AES256.decryptAES256(mem.getPw(), key));
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
 		
 		request.setAttribute("mem", mem);
 		RequestDispatcher view = request.getRequestDispatcher("/member/memberInfo.jsp");

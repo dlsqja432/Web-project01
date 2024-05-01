@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="path0" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
@@ -65,6 +66,15 @@
 					 		<th><label for="tel">전화번호</label></th>
 					 		<td>
 					 			<input type="tel" name="tel" id="tel" value="${mem.tel }" class="form-control" required>
+					 		</td>
+					 	</tr>
+					 	<tr>
+					 		<th><label for="post_btn">주소</label></th>
+					 		<td>
+					 			<c:set var="address" value="${fn:split(mem.addr, ' $ ')}"/>
+					 			<input type="text" name="address1" id="address1" class="form-control" value="${address[0] }" readonly required><br>
+					 			<input type="text" name="address2" id="address2" class="form-control" value="${address[1] }" readonly required><br>
+					 			<input type="text" name="postcode" id="postcode" class="form-control" value="${mem.postcode }" style="width:160px" readonly required>
 					 		</td>
 					 	</tr>
 					 </tbody>

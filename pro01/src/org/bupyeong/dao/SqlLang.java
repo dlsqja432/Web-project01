@@ -16,7 +16,7 @@ public interface SqlLang {
 	String SELECT_ALL_MEMBER = "select * from member order by id";
 	String SELECT_MEMBER_BYID = "select * from member where id=?";
 	String SELECT_ONE_MEMBER = "select * from member where id=?";
-	String INSERT_MEMBER = "insert into member values(?,?,?,?,?)";
+	String INSERT_MEMBER = "insert into member values(?,?,?,?,?,?,?)";
 	String UPDATE_MEMBER = "update member set pw=?, name=?, email=?, tel=? where id=?";
 	String DELETE_MEMBER = "delete from member where id=?";
 	
@@ -43,6 +43,13 @@ public interface SqlLang {
 	String INSERT_COMENT = "insert into coment values(cseq.nextval, ?, ?, default, ?)";
 	String SELECT_ALL_COMENT = "select * from coment where no=? order by cno";
 	String DELETE_COMENT = "delete from coment where cno=?";
+	
+	String SELECT_ALL_DATA = "select * from data order by resdate desc";
+	String VISITED_UPDATE_DATA = "update data set visited=visited+1 where no=?";
+	String SELECT_DATA_BYNO = "select * from data where no=?";
+	String INSERT_DATA = "insert into data values (dseq.nextval, ?, ?, ?, sysdate, 0)";
+	String UPDATE_DATA = "update data set title=?, content=?, datafile=? where no=?";
+	String DELETE_DATA = "delete from data where no=?";
 	
 	
 	Connection connect();
